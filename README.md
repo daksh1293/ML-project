@@ -1,1 +1,3 @@
-"This is the ml end to end project"
+A end-to-end machine learning web application that predicts a student's math score based on demographic and academic input features such as gender, ethnicity, parental education level, lunch type, test preparation course, reading score, and writing score.
+The project follows a modular ML pipeline covering data ingestion, data transformation, model training with multiple algorithms (Random Forest, XGBoost, CatBoost, Gradient Boosting, etc.), and automatic selection of the best performing model based on R² score. The trained model is serialized and served via a Flask web application, deployed on AWS Elastic Beanstalk for scalable cloud hosting.
+Tech Stack: Python, Scikit-learn, XGBoost, CatBoost, Flask, AWS Elastic Beanstalk, Docker
