@@ -1,3 +1,13 @@
+---
+title: Student Performance Indicator
+emoji: 🎓
+colorFrom: blue
+colorTo: green
+sdk: docker
+pinned: false
+---
+
+
 FROM python:3.10-slim
 
 WORKDIR /app

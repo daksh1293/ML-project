@@ -20,11 +20,6 @@ This is my B.Tech final year project — a machine learning web app that predict
 
 The model is trained on the [Students Performance in Exams](https://www.kaggle.com/datasets/spscientist/students-performance-in-exams) dataset and deployed live on AWS, so you can actually use it from a browser without any setup.
 
----
-
-## 🌐 Live Demo
-
-**🔗 http://studentperformanceindicator-env.eba-r2vsfqhe.ap-southeast-2.elasticbeanstalk.com/predictdata
 
 Fill in the form → click **Predict your Maths Score** → get result instantly.
 
