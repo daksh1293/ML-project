@@ -1,3 +1,13 @@
+---
+title: Student Performance Indicator
+emoji: 🎓
+colorFrom: blue
+colorTo: green
+sdk: docker
+pinned: false
+---
+
+
 # 🎓 Student Exam Performance Indicator
 
 > Predicting a student's **Mathematics exam score** using demographic and academic features — built with scikit-learn and deployed on AWS Elastic Beanstalk.
