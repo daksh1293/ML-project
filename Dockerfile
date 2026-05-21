@@ -1,18 +1,7 @@
----
-title: Student Performance Indicator
-emoji: 🎓
-colorFrom: blue
-colorTo: green
-sdk: docker
-pinned: false
----
-
-
 FROM python:3.10-slim
 
 WORKDIR /app
 
-# Install system dependencies needed for scientific packages
 RUN apt-get update && apt-get install -y \
     gcc \
     g++ \
@@ -25,4 +14,4 @@ COPY . .
 
 EXPOSE 7860
 
-CMD ["gunicorn", "--bind", "0.0.0.0:7860", "app:app"]
+CMD ["gunicorn", "--bind", "0.0.0.0:7860", "application:app"]
