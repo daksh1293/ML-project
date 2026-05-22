@@ -1,8 +1,17 @@
 ---
 title: Student Performance Indicator
+emoji: 🎓
+colorFrom: blue
+colorTo: green
+sdk: docker
+pinned: false
+---
+
 # 🎓 Student Exam Performance Indicator
 
-[![Live Demo](https://img.shields.io/badge/🤗%20Live%20Demo-Hugging%20Face%20Spaces-blue)](https://daksh1293-student-performance-indicator.hf.space/predictdata)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Hugging%20Face%20Spaces-blue)](https://daksh1293-student-performance-indicator.hf.space/predictdata)
+
+
 
 > Predicting a student's **Mathematics exam score**...
 emoji: 🎓
