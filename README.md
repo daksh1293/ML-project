@@ -1,5 +1,10 @@
 ---
 title: Student Performance Indicator
+# 🎓 Student Exam Performance Indicator
+
+[![Live Demo](https://img.shields.io/badge/🤗%20Live%20Demo-Hugging%20Face%20Spaces-blue)](https://daksh1293-student-performance-indicator.hf.space/predictdata)
+
+> Predicting a student's **Mathematics exam score**...
 emoji: 🎓
 colorFrom: blue
 colorTo: green
@@ -7,10 +12,9 @@ sdk: docker
 pinned: false
 ---
 
-
 # 🎓 Student Exam Performance Indicator
 
-> Predicting a student's **Mathematics exam score** using demographic and academic features — built with scikit-learn and deployed on AWS Elastic Beanstalk.
+> Predicting a student's **Mathematics exam score** using demographic and academic features — built with scikit-learn and deployed on Hugging Face Spaces.
 
 ---
 
@@ -18,13 +22,9 @@ pinned: false
 
 This is my B.Tech final year project — a machine learning web app that predicts how a student will score in their **Maths exam** based on inputs like their gender, parental education, lunch type, test preparation course completion, and their reading and writing scores.
 
-The model is trained on the [Students Performance in Exams](https://www.kaggle.com/datasets/spscientist/students-performance-in-exams) dataset and deployed live on AWS, so you can actually use it from a browser without any setup.
-
+The model is trained on the [Students Performance in Exams](https://www.kaggle.com/datasets/spscientist/students-performance-in-exams) dataset and deployed live on Hugging Face Spaces, so you can actually use it from a browser without any setup.
 
 Fill in the form → click **Predict your Maths Score** → get result instantly.
-
-
-
 
 ---
 
@@ -79,10 +79,10 @@ Reading and writing scores turned out to be by far the strongest predictors — 
 
 ## 🗂️ Project Structure
 
-```
 student-performance-prediction/
 │
-├── application.py              # Flask app entry point (AWS EB compatible)
+├── application.py              # Flask app entry point
+├── Dockerfile                  # Docker config for Hugging Face Spaces
 ├── requirements.txt            # Python dependencies
 │
 ├── src/
@@ -105,9 +105,7 @@ student-performance-prediction/
 │   ├── EDA.ipynb               # Exploratory data analysis
 │   └── Model Training.ipynb    # Model comparison and selection
 │
-├── artifacts/                  # Saved model and preprocessor (.pkl files)
-└── assets/
-```
+└── artifacts/                  # Saved model and preprocessor (.pkl files)
 
 ---
 
@@ -115,8 +113,8 @@ student-performance-prediction/
 
 **1. Clone the repo**
 ```bash
-git clone https://github.com/yourusername/student-performance-prediction.git
-cd student-performance-prediction
+git clone https://github.com/daksh1293/ML-project.git
+cd ML-project
 ```
 
 **2. Create a virtual environment**
@@ -141,16 +139,15 @@ Open `http://localhost:5000` in your browser.
 
 ## 🚀 Deployment
 
-The app is deployed on **AWS Elastic Beanstalk** (Python platform, ap-southeast-2 region).
+The app is deployed on **Hugging Face Spaces** using Docker.
+
+🔗 **Live App:** https://daksh1293-student-performance-indicator.hf.space
 
 To deploy your own instance:
 ```bash
-pip install awsebcli
-eb init -p python-3.10 student-performance-app
-eb create student-performance-env
-eb deploy
+git remote add hf https://huggingface.co/spaces/YOUR_USERNAME/YOUR_SPACE_NAME
+git push hf main
 ```
-
 
 ---
 
@@ -161,7 +158,7 @@ eb deploy
 - **Frontend:** HTML5, CSS
 - **Data:** pandas, numpy
 - **Visualization:** matplotlib, seaborn
-- **Deployment:** AWS Elastic Beanstalk
+- **Deployment:** Hugging Face Spaces (Docker)
 - **Serialization:** joblib
 
 ---
